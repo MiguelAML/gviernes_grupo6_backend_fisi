@@ -4,6 +4,10 @@ export interface User {
     username: string;
     fullname: string;
     email: string;
+    birthday_date: Date;    
+    faculty: string;
+    cycle: Int16Array;
+    dni: Int16Array;
     password: string;
 }
 
