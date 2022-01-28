@@ -159,7 +159,7 @@ export const getAllPostsForSearch = async (req: Request, res: Response): Promise
         });
 
     } catch(err) {
-        return res.status(500).json({
+        return res.status(500).json({ 
             resp: false,
             message: err
         });
