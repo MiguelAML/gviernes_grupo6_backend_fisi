@@ -4,6 +4,10 @@ export interface User {
     username: string;
     fullname: string;
     email: string;
+    birthday_date: Date;    
+    faculty: string;
+    cycle: Int16Array;
+    dni: Int16Array;
     password: string;
 }
 
@@ -12,6 +16,7 @@ export interface IUpdateProfile {
     description?: string;
     fullname?: string;
     phone?: string;
+    cycle?: Int16Array;
 }
 
 export interface IChangePassword {
