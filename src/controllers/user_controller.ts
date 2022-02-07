@@ -33,7 +33,7 @@ export const createUser = async ( req: Request, res: Response ): Promise<Respons
         
         await conn.query(`CALL SP_REGISTER_USER(?,?,?,?,?,?,?);`, [ uuidv4(), fullname, username, email, pass, uuidv4(), randomNumber ]);
 
-        await sendEmailVerify('Codigo de verificación', email, `<h1> Social Frave </h1><hr> <b>${ randomNumber } </b>`);
+        await sendEmailVerify('Codigo de verificación', email, `<h1> Red Estudiantil </h1><hr> <b>${ randomNumber } </b>`);
 
         conn.end();
 
