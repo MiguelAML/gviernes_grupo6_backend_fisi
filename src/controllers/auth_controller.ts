@@ -55,7 +55,7 @@ export const login = async ( req: Request, res: Response): Promise<Response> => 
         
         return res.json({
             resp: true,
-            message: 'Bienvenido a Social Frave',
+            message: 'Bienvenido a Red Estudiantil',
             token: token
         });
         
@@ -76,7 +76,7 @@ export const renweLogin = async ( req: Request, res: Response ) => {
 
         return res.json({
             resp: true,
-            message: 'Bienvenido a Social Frave',
+            message: 'Bienvenido a Red Estudiantil',
             token: token
         }); 
         
@@ -98,7 +98,7 @@ const resendCodeEmail = async (email: string): Promise<void> => {
 
     await conn.query('UPDATE users SET token_temp = ? WHERE email = ?', [ randomNumber, email ]);
 
-    await sendEmailVerify('Codigo de verificación', email, `<h1> Social Frave </h1><hr> <b>${ randomNumber } </b>`);
+    await sendEmailVerify('Codigo de verificación', email, `<h1> Red Estudiantil </h1><hr> <b>${ randomNumber } </b>`);
 
     conn.end();
 
